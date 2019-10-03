@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Grounded : MonoBehaviour
 {
-    GameObject Player;
+	GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,8 @@ public class Grounded : MonoBehaviour
         if (collision.collider.tag == "Ground")
         {
             Player.GetComponent<PlayerMove>().isGrounded = true;
-        }
+
+		}
     }
 
     private void OnCollisionExit2D(Collision2D collision)
