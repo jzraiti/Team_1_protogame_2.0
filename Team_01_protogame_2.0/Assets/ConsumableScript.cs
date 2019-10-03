@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ConsumableScript : MonoBehaviour
 {
-    public AudioSource audio;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +18,14 @@ public class ConsumableScript : MonoBehaviour
 
 
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")
         {
+            
             gameObject.SetActive(false); //will deactivate not destroy game object DO NOT DESTROY
             ScoreScript.scoreValue += 10;
-            audio.Play();
+           
 
             
         }
