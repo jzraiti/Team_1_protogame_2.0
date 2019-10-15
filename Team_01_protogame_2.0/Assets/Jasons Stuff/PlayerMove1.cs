@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMove1 : MonoBehaviour
 {
     public AudioSource audio;
     public float moveSpeed = 5f;

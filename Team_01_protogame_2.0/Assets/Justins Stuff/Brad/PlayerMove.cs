@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    public Animator animator;
     public AudioSource audio;
     public float moveSpeed = 5f;
     public bool isGrounded = false;
+    float horizontalMove = 0f;
     // Start is called before the first frame update
     void Start()
     {
