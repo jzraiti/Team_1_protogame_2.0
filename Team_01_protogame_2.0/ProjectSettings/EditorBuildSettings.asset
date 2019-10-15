@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Justins Stuff/Justin's Menu.unity
     guid: e3bf590014e33450fbffb1b2eaf0a3f2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Justins Stuff/Justins Scene.unity
     guid: 9c52cde3b7a474dbfb8c4351e76aa685
+  - enabled: 1
+    path: Assets/Justins Stuff/Jasons Test/Jasons Experimental Scene.unity
+    guid: 3ea3f785a1fce424fbc3542b090e7978
   m_configObjects: {}

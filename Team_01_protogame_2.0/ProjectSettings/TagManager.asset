@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Wall
   - Pickup
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -46,4 +47,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: foreground
+    uniqueID: 3686477219
     locked: 0

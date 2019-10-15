@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
     bool crouch = false;
+   
 
     // Update is called once per frame
     void Update() 
@@ -19,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+        //animator.SetBool("IsDamaged", false);
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -35,6 +38,18 @@ public class PlayerMovement : MonoBehaviour
             crouch = false;
         }
 
+
+
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        print("HI");
+        if (collision.gameObject.tag == "enemy")
+        {
+            print("HIT");
+            animator.SetBool("IsDamaged", true);
+        }
     }
 
     public void OnLanding()
