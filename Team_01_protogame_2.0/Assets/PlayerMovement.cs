@@ -8,20 +8,36 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     public float runSpeed = 40f;
+    
 
     float horizontalMove = 0f;
     bool jump = false;
     bool crouch = false;
 
-    // Update is called once per frame
-    void Update() 
-    {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+    int lastin = 0;
+    int newin = 0;
+
+    // Update is called once per frame
+    void Update()
+    {
+        int drunkness = ScoreScript.scoreValue;
+        //horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        //animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        float drunkdelay = (float)drunkness;
+        newin = (int)Input.GetAxisRaw("Horizontal");
+        if (lastin != newin)
+        {
+            Invoke("Movement", drunkdelay / 10);
+        }
+        lastin = newin;
+        
+        //hopefully this is making the player's reaction time in game delayed
+        //proportional to the score
 
         if (Input.GetButtonDown("Jump"))
         {
+
             jump = true;
             animator.SetBool("IsJumping", true);
         }
@@ -37,6 +53,13 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public void Movement()
+    {
+        horizontalMove = newin * runSpeed;
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+    }
+
     public void OnLanding()
     {
         animator.SetBool("IsJumping", false);
@@ -44,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
     }
