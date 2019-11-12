@@ -5,6 +5,7 @@ using UnityEngine;
 public class laserbeam : MonoBehaviour
 {
     public ParticleSystem particleSystem;
+    public AudioSource audio;
     ParticleSystem ps;
 
     // Start is called before the first frame update
@@ -20,6 +21,7 @@ public class laserbeam : MonoBehaviour
         {
             print("Fire1");
             ps.Emit(1);
+            audio.Play();
         }
     }
 
