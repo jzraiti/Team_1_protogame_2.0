@@ -17,10 +17,7 @@ public class DamagedSprite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (gameObject. == false)
-        //{
-            //ps.Play();
-        //}
+       
     }
     void OnTriggerEnter2D(Collider2D other)
     {
