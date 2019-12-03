@@ -7,7 +7,7 @@ public class GameOver : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("Justin's Menu", LoadSceneMode.Single);
     }
     public void QuitGame()
     {

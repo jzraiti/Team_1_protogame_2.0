@@ -7,6 +7,7 @@ public class enemy : MonoBehaviour
     public int health = 100;
     public GameObject deathEffect;
     public int damage = 10;
+    //public int totalenemies;
 
     public void TakeDamage (int damage)
     {
@@ -14,6 +15,8 @@ public class enemy : MonoBehaviour
 
         if (health <= 0)
         {
+            EnemyTracker.deadenemies += 1; 
+            ScoreScript.scoreValue += 10;
             Die();
         }
     }
@@ -28,7 +31,7 @@ public class enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //totalenemies = GameObject.FindGameObjectWithTag("Etracker").GetComponent<EnemyTracker>().startnumenemies;
     }
 
     // Update is called once per frame

@@ -25,6 +25,7 @@ public class ConsumableScript : MonoBehaviour
             
             gameObject.SetActive(false); //will deactivate not destroy game object DO NOT DESTROY
             ScoreScript.scoreValue += 10;
+            HealthScript.health += 5;
            
 
             

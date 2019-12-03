@@ -8,6 +8,9 @@ TagManager:
   - Wall
   - Pickup
   - Enemy
+  - Timer
+  - Score
+  - Etracker
   layers:
   - Default
   - TransparentFX

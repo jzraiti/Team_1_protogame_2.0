@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
         newin = (int)Input.GetAxisRaw("Horizontal");
         if (lastin != newin)
         {
-            Invoke("Movement", drunkdelay / 10);
+            Invoke("Movement", drunkdelay / 35);
         }
         lastin = newin;
         

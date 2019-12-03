@@ -8,13 +8,22 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Justins Stuff/Justins Scene.unity
+    guid: 9c52cde3b7a474dbfb8c4351e76aa685
   - enabled: 1
     path: Assets/Justins Stuff/Justin's Menu.unity
     guid: e3bf590014e33450fbffb1b2eaf0a3f2
   - enabled: 1
-    path: Assets/Justins Stuff/Justins Scene.unity
-    guid: 9c52cde3b7a474dbfb8c4351e76aa685
+    path: Assets/Justins Stuff/Level 1.unity
+    guid: 9e06e9376474d46bebbbad27afd6a98b
+  - enabled: 1
+    path: Assets/Justins Stuff/Level 2.unity
+    guid: 4f9c8bb25bea54aea87137fb0080fb87
+  - enabled: 1
+    path: Assets/Justins Stuff/Game Won.unity
+    guid: 5e73f4294ab654a689ca5dd715c99d2c
   - enabled: 1
     path: Assets/Justins Stuff/Game Over.unity
-    guid: 5e73f4294ab654a689ca5dd715c99d2c
+    guid: 6040b5be13153444d8a19b0c6cdb294f
   m_configObjects: {}
